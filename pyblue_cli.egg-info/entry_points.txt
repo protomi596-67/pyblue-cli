@@ -1,0 +1,2 @@
+[console_scripts]
+pyblue-cli = cli.main:app

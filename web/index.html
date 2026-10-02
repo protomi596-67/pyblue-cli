@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyBlue-CLI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0a0a1a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 60px;
+        }
+        h1 {
+            font-size: 4rem;
+            color: #7c3aed;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #888;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+        .cmd {
+            background: #1a1a2e;
+            border: 1px solid #7c3aed;
+            border-radius: 10px;
+            padding: 20px 40px;
+            margin: 15px auto;
+            max-width: 600px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            color: #a78bfa;
+            cursor: pointer;
+            transition: all 0.3s;
+            word-break: break-all;
+        }
+        .cmd:hover {
+            background: #7c3aed;
+            color: #fff;
+        }
+        .label {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PyBlue-CLI</h1>
+        <p>Blue Team Automation</p>
+        <div class="label">Instalar</div>
+        <div class="cmd" onclick="copy(this)">pip install git+https://github.com/protoMI596-67/pyblue-cli.git</div>
+        <div class="label">Ejecutar</div>
+        <div class="cmd" onclick="copy(this)">pyblue-cli</div>
+    </div>
+    <script>
+        function copy(el) {
+            navigator.clipboard.writeText(el.textContent);
+            el.style.background = '#7c3aed';
+            el.style.color = '#fff';
+            setTimeout(() => {
+                el.style.background = '#1a1a2e';
+                el.style.color = '#a78bfa';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
